@@ -1,0 +1,125 @@
+%% TeXworks instructions:
+% !TeX root = ./assignment.tex
+% !TEX encoding = UTF-8 Unicode
+% !TEX program = arara
+% !TEX TS-program = arara
+% !TeX spellcheck = en-US
+
+% arara: pdflatex
+% arara: pdflatex: { synctex: yes }
+
+%% Generate a report.xmpdata file with title and authors for PDF/A-compliant format %%
+\begin{filecontents*}{\jobname.xmpdata}
+    \Title{Assignment 03 Prolog Report}
+    \Author{Niccolò Maltoni}
+\end{filecontents*}
+
+\documentclass[
+    a4paper,            % specifica il formato A4 (default: letter)
+    10pt,               % specifica la dimensione del carattere a 10
+    oneside,            % serve per impaginare per stampa solo fronte
+    english
+]{article}
+
+\usepackage[T1]{fontenc}        % serve per impostare la codifica di output del font
+\usepackage{textcomp}           % serve per fornire supporto ai Text Companion fonts
+\usepackage[utf8]{inputenc}     % serve per impostare la codifica di input del font
+\usepackage[english]{babel}
+\usepackage{lmodern}            % carica una variante Latin Modern prodotto dal GUST
+
+\usepackage[%
+    strict,             % rende tutti gli warning degli errori
+    autostyle,          % imposta lo stile in base al linguaggio specificato in babel
+    english=american    % imposta lo stile per l'inglese
+]{csquotes}                     % serve a impostare lo stile delle virgolette
+
+\usepackage[%
+    depth=3,            % equivale a bookmarksdepth di hyperref
+    open=false,         % equivale a bookmarksopen di hyperref
+    numbered=true       % equivale a bookmarksnumbered di hyperref
+]{bookmark}                     % Gestisce i segnalibri meglio di hyperref
+\usepackage{hyperref}           % Gestisce tutte le cose ipertestuali del pdf
+\hypersetup{%
+    pdfpagemode={UseNone},
+    hidelinks,          % nasconde i collegamenti (non vengono quadrettati)
+    hypertexnames=false,
+    linktoc=all,        % inserisce i link nell'indice
+    unicode=true,       % only Latin characters in Acrobat’s bookmarks
+    pdftoolbar=false,   % show Acrobat’s toolbar?
+    pdfmenubar=false,   % show Acrobat’s menu?
+    plainpages=false,
+    breaklinks,
+    pdfstartview={Fit},
+    pdfauthor={Luca Semprini},
+    pdfcreator={Luca Semprini},
+    pdftitle={Assignment 03 Prolog Report},
+    pdflang={it}
+}
+\usepackage[a-1b]{pdfx}
+\usepackage[%
+    english,            % definizione delle lingue da usare
+    nameinlink          % inserisce i link nei riferimenti
+]{cleveref}                     % permette di usare riferimenti migliori dei \ref e dei varioref
+
+% MARGINI LARGHI
+\textwidth 6.3 in % Width of text line.
+    \textheight 9.2 in
+    \oddsidemargin 0 in      %   Left margin on odd-numbered pages.
+    \evensidemargin 0 in      %   Left margin on even-numbered pages.
+    \topmargin 0.2 in
+    \headheight 0 in       %   Width of marginal notes.
+    \headsep 0 in
+    \topskip 0 in
+    
+\title{\vspace{-70pt}Assignment 03 -- ``Prolog''}
+\author{Luca Semprini, matr: 854447, email: {\href{mailto:luca.semprini10@studio.unibo.it}{\texttt{luca.semprini10@studio.unibo.it}}}
+\date{21/01/2018}
+
+
+\begin{document}
+
+    \maketitle
+    \vspace{-30pt}
+
+    \subsection*{Description of the code you provide}
+
+        \begin{itemize}
+            \item 
+                Full solution to lab 10 along with final exercises: \texttt{inv}, \texttt{double}, \texttt{times}, \texttt{proj}.
+                \begin{itemize}
+                    \item Check comments on the \texttt{.pl} files
+                    \item Necessary time: $\sim$~3.5 hours
+                \end{itemize}
+
+            \item 
+                Full solution to lab 11.
+                \begin{itemize}
+                    \item Check comments on the \texttt{.pl} files
+                    \item Necessary time: $\sim$~6 hours
+                \end{itemize}
+        \end{itemize}
+
+    \subsection*{Techniques used}
+
+        \begin{itemize}
+            \item Prolog search-space abilities;
+            \item Prolog use of unification;
+            \item Prolog use of variables (use of universal facts);
+            \item Prolog use of substitutions;
+            \item Prolog use of rules;
+            \item Prolog use of fully relationality;
+            \item Prolog use of tail recursion;
+            \item Prolog use of predicate 0-ary \texttt{cut} (\texttt{!});
+            \item Prolog use of advanced library predicates like \texttt{findall/3}, \texttt{member/2} and \texttt{append/3};
+            \item Java-tuProlog integration and testing.
+        \end{itemize}
+
+    \subsection*{Self-evaluation}
+        In making of this assignment, I learned a lot of concepts and techniques of Prolog. 
+        I was not skilled on LP at all, but solving these exercises I improved my abilities. 
+        As I started understanding Prolog, I also started realizing its viable applications in real-life problems,
+        such as in recursive problems, wich are very common.
+ 
+\end{document}
+    
+    
